@@ -35,9 +35,9 @@ spec:
   kafka:
     pool: nav-dev
   envFrom:
-    - secret: sf-tiltak-avtale
+    - secret: sf-tiltak-avtale-tmp
   filesFrom:
-    - secret: sf-tiltak-avtale
+    - secret: sf-tiltak-avtale-tmp
   env:
     - name: KAFKA_TOPIC
       value: arbeidsgiver.tiltak-avtale-hendelse
