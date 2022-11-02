@@ -1,10 +1,3 @@
-FROM gcr.io/distroless/java17
-
-# TODO change to match the path to your "fat jar"
-COPY build/libs/app-all.jar /app/app-all.jar
-
-WORKDIR /app
-
-USER nonroot
-
-CMD ["app-all.jar"]
+FROM navikt/java:11
+ENV JAVA_OPTS="-Dlogback.configurationFile=logback-remote.xml -Xms512M -Xmx1024M"
+COPY build/libs/app*.jar app.jar
