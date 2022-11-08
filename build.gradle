@@ -62,7 +62,7 @@ repositories {
     mavenCentral()
     jcenter()
     maven {
-        url "http://packages.confluent.io/maven"
+        url "https://packages.confluent.io/maven"
     }
 
     ["maven-release", "crm-utilities"].each { repo ->
